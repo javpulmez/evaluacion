@@ -20,4 +20,9 @@ class Aula extends Model
     {
         return $this->belongsTo(Edificio::class);
     }
+
+    public function moviliario()
+    {
+        return $this->belongsToMany(Moviliario::class);
+    }
 }
