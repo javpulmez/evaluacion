@@ -21,8 +21,8 @@ class Aula extends Model
         return $this->belongsTo(Edificio::class);
     }
 
-    public function moviliario()
+    public function mobiliario()
     {
-        return $this->belongsToMany(Moviliario::class);
+        return $this->belongsToMany(Mobiliario::class);
     }
 }

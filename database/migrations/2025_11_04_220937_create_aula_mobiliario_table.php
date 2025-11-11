@@ -11,17 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('aula_moviliario', function (Blueprint $table) {
+        Schema::create('aula_mobiliario', function (Blueprint $table) {
             $table->foreignId('aula_id')->constrained()->onDelete('cascade');
-            $table->foreignId('moviliario_id')->constrained('moviliario');
+            $table->foreignId('mobiliario_id')->constrained('mobiliario');
         });
 
-        // Schema::create('aula_moviliario', function (Blueprint $table) {
+        // Schema::create('aula_mobiliario', function (Blueprint $table) {
         //     $table->bigInteger('aula_id')->unsigned();
-        //     $table->bigInteger('moviliario_id')->unsigned();
+        //     $table->bigInteger('mobiliario_id')->unsigned();
 
         //     $table->foreign('aula_id')->references('id')->on('aulas')->onDelete('cascade');
-        //     $table->foreign('moviliario_id')->references('id')->on('moviliario');
+        //     $table->foreign('mobiliario_id')->references('id')->on('mobiliario');
         // });
     }
 
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('aula_moviliario');
+        Schema::dropIfExists('aula_mobiliario');
     }
 };
